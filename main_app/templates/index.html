@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-<div>
+<div class="container">
   <h1>Home Page</h1>
+  {% for i in race_info %}
+    <h3>{{ i.name }}</h3>
+    <p>{{ i.alignment }} <a href="/races/{{ i.index }}">more...</a></p>
+  {% endfor %}
 </div>
 {% endblock %}
