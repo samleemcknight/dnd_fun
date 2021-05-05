@@ -18,3 +18,6 @@ def home(request):
 
 def characters(request):
   return render(request, 'characters.html')
+
+def races(request):
+  return render(request, 'races/index.html')
