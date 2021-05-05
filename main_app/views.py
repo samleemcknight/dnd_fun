@@ -21,3 +21,6 @@ def characters(request):
 
 def races(request):
   return render(request, 'races/index.html')
+
+def race(request, name):
+  return render(request, 'races/show.html')
