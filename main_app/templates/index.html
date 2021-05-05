@@ -2,9 +2,11 @@
 {% block content %}
 <div class="container">
   <h1>Home Page</h1>
-  {% for i in race_info %}
-    <h3>{{ i.name }}</h3>
-    <p>{{ i.alignment }} <a href="/races/{{ i.index }}">more...</a></p>
-  {% endfor %}
+  <h3><a>Character Data</a></h3>
+  <h3><a>Classes</a></h3>
+  <h3><a>Races</a></h3>
+  <h3><a>Equipment</a></h3>
+  <h3><a>Spells</a></h3>
+  <h3><a>Monsters</a></h3>
 </div>
 {% endblock %}
