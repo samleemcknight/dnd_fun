@@ -9,3 +9,7 @@ body {
   justify-content: center;
   max-height: 200px;
 }
+
+.traits {
+  display: block;
+}

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <h1>{{ race_info.name }}</h1>
+  <hr>
+  <h4>Alignment:</h4>
+  <p>{{ race_info.alignment }}</p>
+  <h4>Age:</h4>
+  <p>{{ race_info.age }}</p>
+  <h4>Size:</h4>
+  <p> {{ race_info.size_description}} </p>
+  <h4>Language:</h4>
+  <p> {{ race_info.language_desc }} </p>
+  <h4>Traits:</h4>
+  <div class="col col-sm-12">
+    {% for el in race_info.traits %}
+    <span class="traits"> {{el.name}} </span >
+    {% endfor %}
+  </div>
+  <hr>
+  {% if race_info.subraces %}
+  <div class="row">
+      {% if subrace.index == "high-elf" %}
+        <div class="col col-sm-6">
+          <h4>Subrace: High-Elf</h4>
+          <p>High elves have a keen mind and a mastery of at least the basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type is more common and more friendly, and often encountered among humans and other races.</p>
+        </div>
+        <div class="col col-sm-6 imgRace">
+          <img src="https://i.pinimg.com/originals/cd/32/d5/cd32d5bb735d4c1dcf2e76e5cd14c83a.png" alt="high-elf" class="img-thumbnail">
+        </div>
+      {% elif subrace.index == "hill-dwarf" %}
+        <div class="col col-sm-6">
+          <h4>Subrace: Hill-Dwarf</h4>
+          <p>
+          Hill dwarves have keen senses, deep intuition, and remarkable resilience.
+          </p>
+        </div>
+        <div class="col col-sm-6 imgRace">
+          <img src="https://i.pinimg.com/originals/4f/57/52/4f57524e02c5f154a908db933dd9550b.jpg" alt="hill dwarf" class="img-thumbnail">
+        </div>
+      {% elif subrace.index == "lightfoot-halfling" %}
+        <div class="col col-sm-6">
+          <h4>Subrace: Lightfoot-Halfling</h4>
+          <p>
+          Lightfoot halflings can easily hide from notice, even using other people as cover. They're inclined to be affable and get along well with others. Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.
+          </p>
+        </div>
+        <div class="col col-sm-6 imgRace">
+          <img src="https://i.pinimg.com/originals/fd/27/2f/fd272fda567e6bb4d2951195def7204a.jpg" alt="lightfoot halfling" class="img-thumbnail">
+        </div>
+      {% elif subrace.index == "rock-gnome" %}
+        <div class="col col-sm-6">
+          <h4>Subrace: Rock Gnomes</h4>
+          <p>Rock gnomes have a natural inventiveness and hardiness beyond that of other gnomes.</p>
+        </div>
+        <div class="col col-sm-6 imgRace">
+          <img src="https://cdn.vox-cdn.com/thumbor/yh-iTeYpeiq3B5msaK93YY86Cv4=/0x0:1500x2036/1200x0/filters:focal(0x0:1500x2036):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/10814363/Tinker_Gnomes.png" alt="rock gnome" class="img-thumbnail">
+        </div>
+      {% endif %}
+  </div>
+  {% endif %}
+</div>
+
+{% endblock %}
